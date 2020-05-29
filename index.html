@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	
+
+</head>
+<body>
+<header style="height: 100vh" class="d-flex justify-content-center align-content-center">
+	
+
+	<div class="card w-50 m-auto text-center">
+  <div class="card-header bg-danger text-white">MAAI</div>
+  <div class="card-body container">
+  	<form class="p-4 px-5 mx-auto">
+  		<div class="form-group">
+  			<input type="text" name=""class="form-control text-center"placeholder="Mohniv" id="name">
+  			
+  		</div>
+  		<div><span class="pl-4 pr-4">+</span></div>
+  		<div class="form-group">
+  			<input type="text" name=""class="form-control text-center"     placeholder="Masturat" id="lname"></div>
+  	</form>
+  	<br>
+  	<div class="mx-auto">
+  		<button class="btn btn-success w-50" onclick="checkloveper ()">Dabav sa
+  		</button>
+  		
+  	</div>
+  	<br>
+  	<div>
+  		<input type="text" id="lovevalue"class="form-control text-center w-25 m-auto" placeholder="love percentage">
+  	</div>
+  </div>
+  <div class="card-footer">KHUDAI THAWNAV MAAI BARKARAR</div>
+
+</header>
+<script >
+	function checkloveper(){
+
+		var name= document.getElementById('name').value;
+		var lname= document.getElementById('lname').value;
+        if (name== "") {
+        	alert('Naav lekhsa Gode');
+        } else if (name.length <=2) {
+        	alert('Min character is 3');
+        }else if (!isNaN(name)){
+        	alert('Numbers are not allowed');
+        }
+       else if (lname== "") {
+        	alert('Byakh naav lekhtaw');
+        } else if (lname.length <=2) {
+        	alert('Min character is 3');
+        }else if (!isNaN(lname)){
+        	alert('Numbers are not allowed');
+        }
+        else{
+        	var lovedata = Math.random() * 100;
+		lovedata = Math.floor(lovedata);
+		document.getElementById('lovevalue').value = lovedata+"%";
+        }
+		
+	}
+</script>
+
+<footer>
+  <p class=" p-3 bg-dark text-white text-center ">Created by oolysolutions.com</p>
+</footer>
+</body>
+</html>
